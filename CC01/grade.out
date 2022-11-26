@@ -1,0 +1,271 @@
+-----------------------------
+Grading script for Coding Challenge 1
+
+Student's Name: Mia Manabat
+Student's ID  : mmanabat
+
+-----------------------------
+Testing make clean
+Expected 'make clean' output: rm -rf *.o lucky streams combine
+Actual 'make clean' output  : rm -rf *.o lucky streams combine
+
+make clean test passed
+10 / 10
+
+-----------------------------
+Testing make lucky
+Expected make lucky output: g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c lucky.cpp
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o lucky lucky.o
+Actual make lucky output  : g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c lucky.cpp
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o lucky lucky.o
+
+make lucky test passed
+25 / 25
+
+-----------------------------
+Testing lucky program
+
+-----------------------------
+Expected './lucky 11235' output: Increasing order
+  Actual './lucky 11235' output: Increasing order
+
+./lucky 11235 test passed
+20 / 20
+
+-----------------------------
+Expected './lucky 13425' output: Not increasing order
+  Actual './lucky 13425' output: Not increasing order
+
+./lucky 13425 test passed
+20 / 20
+
+-----------------------------
+Expected './lucky 11112222' output: Increasing order
+  Actual './lucky 11112222' output: Increasing order
+
+./lucky 11112222 test passed
+20 / 20
+
+-----------------------------
+Expected './lucky 7' output: Increasing order
+  Actual './lucky 7' output: Increasing order
+
+./lucky 7 test passed
+20 / 20
+
+-----------------------------
+Expected './lucky 1234356' output: Not increasing order
+  Actual './lucky 1234356' output: Not increasing order
+
+./lucky 1234356 test passed
+20 / 20
+
+-----------------------------
+lucky valgrind test
+valgrind --tool=memcheck --leak-check=yes ./lucky 1234356 > lucky_valgrind.out 2>&1
+valgrind --tool=memcheck --leak-check=yes ./lucky 1234356 > lucky_valgrind.out 2>&1 passed
+10 / 10
+
+-----------------------------
+Expected make streams output: g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c streams.cpp
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o streams streams.o
+Actual make streams output  : g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c streams.cpp
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o streams streams.o
+
+make streams test passed
+25 / 25
+
+-----------------------------
+Expected './streams' output: Incorrect number of inputs.
+  Actual './streams' output: Incorrect number of inputs.
+
+./streams test passed
+15 / 15
+
+-----------------------------
+Expected './streams streams1.txt' output: speak
+like
+this,
+does
+Yoda
+  Actual './streams streams1.txt' output: speak
+like
+this,
+does
+Yoda
+
+./streams streams1.txt test passed
+20 / 20
+
+-----------------------------
+Expected './streams streams2.txt' output: Cheer
+Cheer
+for
+ol'
+Notre
+Dame
+  Actual './streams streams2.txt' output: Cheer
+Cheer
+for
+ol'
+Notre
+Dame
+
+./streams streams2.txt test passed
+20 / 20
+
+-----------------------------
+Expected './streams streams3.txt' output: The
+quick
+brown
+fox
+jumps
+over
+the
+lazy
+dog.
+  Actual './streams streams3.txt' output: The
+quick
+brown
+fox
+jumps
+over
+the
+lazy
+dog.
+
+./streams streams3.txt test passed
+20 / 20
+
+-----------------------------
+Expected './streams streamsBad.txt' output: File requires an initial integer.
+  Actual './streams streamsBad.txt' output: File requires an initial integer.
+
+./streams streamsBad.txt test passed
+15 / 15
+
+-----------------------------
+streams valgrind test
+valgrind --tool=memcheck --leak-check=yes ./streams streams3.txt > streams_valgrind.out 2>&1
+
+valgrind --tool=memcheck --leak-check=yes ./streams streams3.txt > streams_valgrind.out 2>&1 passed
+10 / 10
+
+-----------------------------
+Testing make combine
+
+Expected make combine output: g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c combine.cpp
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o combine combine.o
+Actual make combine output  : g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c combine.cpp
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o combine combine.o
+
+make combine test passed
+25 / 25
+
+-----------------------------
+Testing combine program
+
+-----------------------------
+Expected './combine' output: Incorrect number of inputs.
+  Actual './combine' output: Incorrect number of inputs.
+
+./combine test passed
+15 / 15
+
+-----------------------------
+Expected './combine 7' output: 1
+3
+6
+10
+15
+21
+28
+  Actual './combine 7' output: 1
+3
+6
+10
+15
+21
+28
+
+./combine 7 test passed
+20 / 20
+
+-----------------------------
+Expected './combine 5' output: 1
+3
+6
+10
+15
+  Actual './combine 5' output: 1
+3
+6
+10
+15
+
+./combine 5 test passed
+20 / 20
+
+-----------------------------
+Expected './combine 1' output: 1
+  Actual './combine 1' output: 1
+
+./combine 1 test passed
+20 / 20
+
+-----------------------------
+Expected './combine 20' output: 1
+3
+6
+10
+15
+21
+28
+36
+45
+55
+66
+78
+91
+105
+120
+136
+153
+171
+190
+210
+  Actual './combine 20' output: 1
+3
+6
+10
+15
+21
+28
+36
+45
+55
+66
+78
+91
+105
+120
+136
+153
+171
+190
+210
+
+./combine 20 test passed
+20 / 20
+
+-----------------------------
+streams valgrind test
+valgrind --tool=memcheck --leak-check=yes ./combine 1 > streams_valgrind.out 2>&1
+
+valgrind --tool=memcheck --leak-check=yes ./combine 1 > streams_valgrind.out 2>&1 passed
+10 / 10
+
+-----------------------------
+-----------------------------
+
+CC01 Coding Portion Grade for Mia Manabat (mmanabat): 400 / 400 

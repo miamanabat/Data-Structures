@@ -1,0 +1,226 @@
+-----------------------------
+Grading script for Coding Challenge 4
+
+Student's Name: Mia Manabat
+Student's ID  : mmanabat
+
+If the outputs appear to match, but the test failed, please check for whitespace in your output.
+By making these cosmetic changes to your output, you can save the TAs hours of grading time.
+
+-----------------------------
+
+-----------------------------
+Testing make SorDLLTest
+rm -rf obj/* exe/*
+Expected make SorDLLTest output: 
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/SorDLLTest.cpp -o obj/SorDLLTest.o
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/SorDLLTest obj/SorDLLTest.o
+Actual make SorDLLTest output  : 
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/SorDLLTest.cpp -o obj/SorDLLTest.o g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/SorDLLTest obj/SorDLLTest.o
+
+make SorDLLTest test passed
+25 / 25
+
+-----------------------------
+Testing SorDLLTest program
+
+-----------------------------
+Expected './exe/SorDLLTest' output: Incorrect number of inputs
+  Actual './exe/SorDLLTest' output: Incorrect number of inputs
+
+./exe/SorDLLTest test passed
+5 / 5
+
+-----------------------------
+Expected './exe/SorDLLTest 1' output: 1 
+1 
+  Actual './exe/SorDLLTest 1' output: 1 
+1 
+
+./exe/SorDLLTest 1 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/SorDLLTest 1 10' output: 1 10 
+10 1 
+  Actual './exe/SorDLLTest 1 10' output: 1 10 
+10 1 
+
+./exe/SorDLLTest 1 10 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/SorDLLTest 10 1' output: 10 1 
+10 1 
+  Actual './exe/SorDLLTest 10 1' output: 10 1 
+10 1 
+
+./exe/SorDLLTest 10 1 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/SorDLLTest 10 1 13' output: 10 1 13 
+13 10 1 
+  Actual './exe/SorDLLTest 10 1 13' output: 10 1 13 
+13 10 1 
+
+./exe/SorDLLTest 10 1 13 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/SorDLLTest 4 7 3 10 22' output: 4 7 3 10 22 
+22 10 7 4 3 
+  Actual './exe/SorDLLTest 4 7 3 10 22' output: 4 7 3 10 22 
+22 10 7 4 3 
+
+./exe/SorDLLTest 4 7 3 10 22 test passed
+15  / 15 
+
+-----------------------------
+Expected './exe/SorDLLTest 1 2 3 4 5 6 7' output: 1 2 3 4 5 6 7 
+7 6 5 4 3 2 1 
+  Actual './exe/SorDLLTest 1 2 3 4 5 6 7' output: 1 2 3 4 5 6 7 
+7 6 5 4 3 2 1 
+
+./exe/SorDLLTest 1 2 3 4 5 6 7 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/SorDLLTest -1 -2 -3 -4 -5 -6 -7' output: -1 -2 -3 -4 -5 -6 -7 
+-1 -2 -3 -4 -5 -6 -7 
+  Actual './exe/SorDLLTest -1 -2 -3 -4 -5 -6 -7' output: -1 -2 -3 -4 -5 -6 -7 
+-1 -2 -3 -4 -5 -6 -7 
+
+./exe/SorDLLTest -1 -2 -3 -4 -5 -6 -7 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/SorDLLTest -7 -6 -5 -4 -3 -2 -1' output: -7 -6 -5 -4 -3 -2 -1 
+-1 -2 -3 -4 -5 -6 -7 
+  Actual './exe/SorDLLTest -7 -6 -5 -4 -3 -2 -1' output: -7 -6 -5 -4 -3 -2 -1 
+-1 -2 -3 -4 -5 -6 -7 
+
+./exe/SorDLLTest -7 -6 -5 -4 -3 -2 -1 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/SorDLLTest 14 1 13 2 12 3 11 4 10 5 9 6 8 7' output: 14 1 13 2 12 3 11 4 10 5 9 6 8 7 
+14 13 12 11 10 9 8 7 6 5 4 3 2 1 
+  Actual './exe/SorDLLTest 14 1 13 2 12 3 11 4 10 5 9 6 8 7' output: 14 1 13 2 12 3 11 4 10 5 9 6 8 7 
+14 13 12 11 10 9 8 7 6 5 4 3 2 1 
+
+./exe/SorDLLTest 14 1 13 2 12 3 11 4 10 5 9 6 8 7 test passed
+15  / 15 
+Expected make PQTest output: 
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/PQTest.cpp -o obj/PQTest.o
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/PQTest obj/PQTest.o
+Actual make PQTest output  : 
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/PQTest.cpp -o obj/PQTest.o g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/PQTest obj/PQTest.o
+
+make PQTest test passed
+25 / 25
+
+-----------------------------
+Expected './exe/PQTest' output: Incorrect number of inputs
+  Actual './exe/PQTest' output: Incorrect number of inputs
+
+./exe/PQTest test passed
+5 / 5
+
+-----------------------------
+Expected './exe/PQTest 1' output: 1 
+  Actual './exe/PQTest 1' output: 1 
+
+./exe/PQTest 1 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest 1 10' output: 10 1 
+  Actual './exe/PQTest 1 10' output: 10 1 
+
+./exe/PQTest 1 10 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest 10 1 3' output: 10 3 1 
+  Actual './exe/PQTest 10 1 3' output: 10 3 1 
+
+./exe/PQTest 10 1 3 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest 4 7 3 10 22' output: 22 10 7 4 3 
+  Actual './exe/PQTest 4 7 3 10 22' output: 22 10 7 4 3 
+
+./exe/PQTest 4 7 3 10 22 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest 1 2 3 4 5 6 7' output: 7 6 5 4 3 2 1 
+  Actual './exe/PQTest 1 2 3 4 5 6 7' output: 7 6 5 4 3 2 1 
+
+./exe/PQTest 1 2 3 4 5 6 7 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest -1 -2 -3 -4 -5 -6 -7' output: -1 -2 -3 -4 -5 -6 -7 
+  Actual './exe/PQTest -1 -2 -3 -4 -5 -6 -7' output: -1 -2 -3 -4 -5 -6 -7 
+
+./exe/PQTest -1 -2 -3 -4 -5 -6 -7 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest -7 -6 -5 -4 -3 -2 -1' output: -1 -2 -3 -4 -5 -6 -7 
+  Actual './exe/PQTest -7 -6 -5 -4 -3 -2 -1' output: -1 -2 -3 -4 -5 -6 -7 
+
+./exe/PQTest -7 -6 -5 -4 -3 -2 -1 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest 14 1 13 2 12 3 11 4 10 5 9 6 8 7' output: 14 13 12 11 10 9 8 7 6 5 4 3 2 1 
+  Actual './exe/PQTest 14 1 13 2 12 3 11 4 10 5 9 6 8 7' output: 14 13 12 11 10 9 8 7 6 5 4 3 2 1 
+
+./exe/PQTest 14 1 13 2 12 3 11 4 10 5 9 6 8 7 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/PQTest 44 4 34 14 24 14 4' output: 44 34 24 14 14 4 4 
+  Actual './exe/PQTest 44 4 34 14 24 14 4' output: 44 34 24 14 14 4 4 
+
+./exe/PQTest 44 4 34 14 24 14 4 test passed
+15 / 15
+
+-----------------------------
+Expected make PrinterTest output: 
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/PrinterTest.cpp -o obj/PrinterTest.o
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Printer.cpp -o obj/Printer.o
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/PrinterTest obj/PrinterTest.o obj/Printer.o
+Actual make PrinterTest output  : 
+g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/PrinterTest.cpp -o obj/PrinterTest.o g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Printer.cpp -o obj/Printer.o g++ -m64 -std=c++11 -Weffc++ -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/PrinterTest obj/PrinterTest.o obj/Printer.o
+
+make PrinterTest test passed
+25 / 25
+
+-----------------------------
+Expected './exe/PrinterTest PrinterTest.txt' output: Pages = 6, Job = Bui_Job
+Pages = 10, Job = Morrison_Job
+Pages = 14, Job = Brockman_Job
+Pages = 19, Job = Bui_Job_2
+Pages = 34, Job = Morrison_Job_2
+Pages = 44, Job = Ramzi_Job
+Pages = 431, Job = Dissertation
+  Actual './exe/PrinterTest PrinterTest.txt' output: Pages = 6, Job = Bui_Job
+Pages = 10, Job = Morrison_Job
+Pages = 14, Job = Brockman_Job
+Pages = 19, Job = Bui_Job_2
+Pages = 34, Job = Morrison_Job_2
+Pages = 44, Job = Ramzi_Job
+Pages = 431, Job = Dissertation
+
+./exe/PrinterTest PrinterTest.txt test passed
+45 / 45
+
+-----------------------------
+-----------------------------
+
+CC04 Coding Portion Grade for Mia Manabat (mmanabat): 400 / 400 

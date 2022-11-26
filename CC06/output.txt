@@ -1,0 +1,54 @@
+Linear Probe Hash:
+Hash Table Size: 23
+Hashed Elements: 10
+{0: ACTIVE, 0, -7}
+{1: ACTIVE, 115, 1143}
+{2: ACTIVE, 23, 223}
+{3: ACTIVE, 138, 1373}
+{4: ACTIVE, 46, 453}
+{5: ACTIVE, 161, 1603}
+{6: ACTIVE, 69, 683}
+{7: ACTIVE, 184, 1833}
+{8: ACTIVE, 92, 913}
+{9: ACTIVE, 207, 2063}
+{10: EMPTY, 0, 0}
+{11: EMPTY, 0, 0}
+{12: EMPTY, 0, 0}
+{13: EMPTY, 0, 0}
+{14: EMPTY, 0, 0}
+{15: EMPTY, 0, 0}
+{16: EMPTY, 0, 0}
+{17: EMPTY, 0, 0}
+{18: EMPTY, 0, 0}
+{19: EMPTY, 0, 0}
+{20: EMPTY, 0, 0}
+{21: EMPTY, 0, 0}
+{22: EMPTY, 0, 0}
+
+Double Hash:
+Hash Table Size: 23
+Hashed Elements: 10
+{0: ACTIVE, 0, -7}
+{1: ACTIVE, 23, 223}
+{2: ACTIVE, 115, 1143}
+{3: ACTIVE, 138, 1373}
+{4: EMPTY, 0, 0}
+{5: EMPTY, 0, 0}
+{6: ACTIVE, 46, 453}
+{7: EMPTY, 0, 0}
+{8: EMPTY, 0, 0}
+{9: ACTIVE, 69, 683}
+{10: ACTIVE, 161, 1603}
+{11: EMPTY, 0, 0}
+{12: ACTIVE, 184, 1833}
+{13: EMPTY, 0, 0}
+{14: EMPTY, 0, 0}
+{15: ACTIVE, 92, 913}
+{16: EMPTY, 0, 0}
+{17: EMPTY, 0, 0}
+{18: ACTIVE, 207, 2063}
+{19: EMPTY, 0, 0}
+{20: EMPTY, 0, 0}
+{21: EMPTY, 0, 0}
+{22: EMPTY, 0, 0}
+

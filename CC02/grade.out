@@ -1,0 +1,465 @@
+-----------------------------
+Grading script for Coding Challenge 2
+
+Student's Name: Mia Manabat
+Student's ID  : mmanabat
+
+If the outputs appear to match, but the test failed, please check for whitespace in your output.
+By making these cosmetic changes to your output, you can save the TAs hours of grading time.
+
+-----------------------------
+Testing make initialize
+Expected make initialize output: 
+rm -rf obj exe
+mkdir obj exe
+
+Actual make initialize output  : 
+rm -rf obj exe mkdir obj exe
+
+make initialize test passed
+23 / 23
+
+-----------------------------
+Testing make clean
+Expected 'make clean' output: rm -rf obj/* exe/*
+Actual 'make clean' output  : rm -rf obj/* exe/* *.o
+
+make clean test passed
+23 / 23
+
+-----------------------------
+Testing make JK_Test
+Expected make JK_Test output: 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/JKFF.cpp -o obj/JKFF.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/JK_Test.cpp -o obj/JK_Test.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/JK_Test obj/JKFF.o obj/JK_Test.o
+Actual make JK_Test output  : 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/JKFF.cpp -o obj/JKFF.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/JK_Test.cpp -o obj/JK_Test.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/JK_Test obj/JKFF.o obj/JK_Test.o
+
+make JK_Test test passed
+25 / 25
+
+-----------------------------
+Testing JK_Test program
+
+-----------------------------
+Expected './exe/JK_Test' output: Incorrect number of inputs
+  Actual './exe/JK_Test' output: Incorrect number of inputs
+
+./exe/JK_Test test passed
+20 / 20
+
+-----------------------------
+Expected './exe/JK_Test badfile.txt' output: badfile.txt does not exist
+  Actual './exe/JK_Test badfile.txt' output: badfile.txt does not exist
+
+./exe/JK_Test badfile.txt test passed
+20 / 20
+
+-----------------------------
+Expected './exe/JK_Test JK_test_1.txt' output: 0 1
+0 1
+1 0
+0 1
+1 0
+0 1
+1 0
+0 1
+  Actual './exe/JK_Test JK_test_1.txt' output: 0 1
+0 1
+1 0
+0 1
+1 0
+0 1
+1 0
+0 1
+
+./exe/JK_Test JK_test_1.txt test passed
+38 / 38
+
+-----------------------------
+Expected './exe/JK_Test JK_test_2.txt' output: 0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+  Actual './exe/JK_Test JK_test_2.txt' output: 0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+0 1
+
+./exe/JK_Test JK_test_2.txt test passed
+38 / 38
+
+-----------------------------
+Expected './exe/JK_Test JK_test_3.txt' output: 0 1
+0 1
+0 1
+1 0
+1 0
+1 0
+1 0
+0 1
+0 1
+0 1
+0 1
+  Actual './exe/JK_Test JK_test_3.txt' output: 0 1
+0 1
+0 1
+1 0
+1 0
+1 0
+1 0
+0 1
+0 1
+0 1
+0 1
+
+./exe/JK_Test JK_test_3.txt test passed
+38 / 38
+
+-----------------------------
+Expected './exe/JK_Test JK_test_4.txt' output: 0 1
+1 0
+1 0
+1 0
+0 1
+1 0
+1 0
+1 0
+0 1
+0 1
+0 1
+0 1
+1 0
+0 1
+  Actual './exe/JK_Test JK_test_4.txt' output: 0 1
+1 0
+1 0
+1 0
+0 1
+1 0
+1 0
+1 0
+0 1
+0 1
+0 1
+0 1
+1 0
+0 1
+
+./exe/JK_Test JK_test_4.txt test passed
+38  / 38 
+
+-----------------------------
+JK_Test valgrind test
+valgrind --tool=memcheck --leak-check=yes ./exe/JK_Test JK_test_3.txt > JK_Test_valgrind.out 2>&1
+valgrind --tool=memcheck --leak-check=yes ./exe/JK_Test JK_test_3.txt > JK_Test_valgrind.out 2>&1 passed
+10 / 10
+
+-----------------------------
+Expected make BDC_Test output: 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/JKFF.cpp -o obj/JKFF.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/BDC.cpp -o obj/BDC.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/BDC_Test.cpp -o obj/BDC_Test.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/BDC_Test obj/JKFF.o obj/BDC.o obj/BDC_Test.o
+Actual make BDC_Test output  : 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/JKFF.cpp -o obj/JKFF.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/BDC.cpp -o obj/BDC.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/BDC_Test.cpp -o obj/BDC_Test.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/BDC_Test obj/JKFF.o obj/BDC.o obj/BDC_Test.o
+
+make BDC_Test test passed
+25 / 25
+
+-----------------------------
+Expected './exe/BDC_Test' output: Incorrect number of inputs
+  Actual './exe/BDC_Test' output: Incorrect number of inputs
+
+./exe/BDC_Test test passed
+20 / 20
+
+-----------------------------
+Expected './exe/BDC_Test badfile.txt' output: badfile.txt does not exist
+  Actual './exe/BDC_Test badfile.txt' output: badfile.txt does not exist
+
+./exe/BDC_Test badfile.txt test passed
+20 / 20
+
+-----------------------------
+Expected './exe/BDC_Test BDC_test_1.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 1 1
+0 0 1 0 2
+0 0 1 1 3
+0 1 0 0 4
+0 1 0 1 5
+0 1 1 0 6
+0 1 1 1 7
+1 0 0 0 8
+1 0 0 1 9
+1 0 1 0 10
+1 0 1 1 11
+1 1 0 0 12
+1 1 0 1 13
+1 1 1 0 14
+1 1 1 1 15
+1 1 1 0 14
+1 1 0 1 13
+1 1 0 0 12
+1 0 1 1 11
+1 0 1 0 10
+1 0 0 1 9
+1 0 0 0 8
+0 1 1 1 7
+0 1 1 0 6
+0 1 0 1 5
+0 1 0 0 4
+0 0 1 1 3
+0 0 1 0 2
+0 0 0 1 1
+0 0 0 0 0
+1 1 1 1 15
+1 1 1 0 14
+Final value in main: 1 1 1 0 14
+  Actual './exe/BDC_Test BDC_test_1.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 1 1
+0 0 1 0 2
+0 0 1 1 3
+0 1 0 0 4
+0 1 0 1 5
+0 1 1 0 6
+0 1 1 1 7
+1 0 0 0 8
+1 0 0 1 9
+1 0 1 0 10
+1 0 1 1 11
+1 1 0 0 12
+1 1 0 1 13
+1 1 1 0 14
+1 1 1 1 15
+1 1 1 0 14
+1 1 0 1 13
+1 1 0 0 12
+1 0 1 1 11
+1 0 1 0 10
+1 0 0 1 9
+1 0 0 0 8
+0 1 1 1 7
+0 1 1 0 6
+0 1 0 1 5
+0 1 0 0 4
+0 0 1 1 3
+0 0 1 0 2
+0 0 0 1 1
+0 0 0 0 0
+1 1 1 1 15
+1 1 1 0 14
+Final value in main: 1 1 1 0 14
+
+./exe/BDC_Test BDC_test_1.txt test passed
+38 / 38
+
+-----------------------------
+Expected './exe/BDC_Test BDC_test_2.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+Final value in main: 0 0 0 0 0
+  Actual './exe/BDC_Test BDC_test_2.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+Final value in main: 0 0 0 0 0
+
+./exe/BDC_Test BDC_test_2.txt test passed
+38 / 38
+
+-----------------------------
+Expected './exe/BDC_Test BDC_test_3.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 1
+0 0 0 1 1
+0 0 1 0 2
+0 0 1 0 2
+0 0 1 1 3
+0 0 1 1 3
+0 1 0 0 4
+0 1 0 0 4
+0 1 0 1 5
+0 1 0 1 5
+0 1 0 0 4
+0 1 0 0 4
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 0 2
+0 0 1 0 2
+0 0 0 1 1
+0 0 0 1 1
+0 0 0 0 0
+0 0 0 0 0
+1 1 1 1 15
+1 1 1 1 15
+1 1 1 0 14
+1 1 1 0 14
+1 1 0 1 13
+1 1 0 1 13
+Final value in main: 1 1 0 1 13
+  Actual './exe/BDC_Test BDC_test_3.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 1
+0 0 0 1 1
+0 0 1 0 2
+0 0 1 0 2
+0 0 1 1 3
+0 0 1 1 3
+0 1 0 0 4
+0 1 0 0 4
+0 1 0 1 5
+0 1 0 1 5
+0 1 0 0 4
+0 1 0 0 4
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 0 2
+0 0 1 0 2
+0 0 0 1 1
+0 0 0 1 1
+0 0 0 0 0
+0 0 0 0 0
+1 1 1 1 15
+1 1 1 1 15
+1 1 1 0 14
+1 1 1 0 14
+1 1 0 1 13
+1 1 0 1 13
+Final value in main: 1 1 0 1 13
+
+./exe/BDC_Test BDC_test_3.txt test passed
+38 / 38
+
+-----------------------------
+Expected './exe/BDC_Test BDC_test_4.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 1
+0 0 1 0 2
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 1 0 0 4
+0 1 0 1 5
+0 1 1 0 6
+0 1 1 0 6
+0 1 1 0 6
+0 1 1 0 6
+0 1 0 1 5
+0 1 0 0 4
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 0 2
+0 0 0 1 1
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+1 1 1 1 15
+1 1 1 0 14
+Final value in main: 1 1 1 0 14
+  Actual './exe/BDC_Test BDC_test_4.txt' output: Initial value in main: 0 0 0 0 0
+0 0 0 0 0
+0 0 0 1 1
+0 0 1 0 2
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 1 0 0 4
+0 1 0 1 5
+0 1 1 0 6
+0 1 1 0 6
+0 1 1 0 6
+0 1 1 0 6
+0 1 0 1 5
+0 1 0 0 4
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 1 3
+0 0 1 0 2
+0 0 0 1 1
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+1 1 1 1 15
+1 1 1 0 14
+Final value in main: 1 1 1 0 14
+
+./exe/BDC_Test BDC_test_4.txt test passed
+38 / 38
+
+-----------------------------
+streams valgrind test
+valgrind --tool=memcheck --leak-check=yes ./exe/BDC_Test BDC_test_2.txt > BDC_valgrind.out 2>&1
+
+valgrind --tool=memcheck --leak-check=yes ./exe/BDC_Test BDC_test_2.txt > BDC_valgrind.out 2>&1 passed
+10 / 10
+
+-----------------------------
+-----------------------------
+
+CC02 Coding Portion Grade for Mia Manabat (mmanabat): 500 / 500 

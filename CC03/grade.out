@@ -1,0 +1,212 @@
+-----------------------------
+Grading script for Coding Challenge 3
+
+Student's Name: Mia Manabat
+Student's ID  : mmanabat
+
+If the outputs appear to match, but the test failed, please check for whitespace in your output.
+By making these cosmetic changes to your output, you can save the TAs hours of grading time.
+
+-----------------------------
+Testing make initialize
+Expected make initialize output: 
+rm -rf obj exe
+mkdir obj exe
+
+Actual make initialize output  : 
+rm -rf obj exe mkdir obj exe
+
+make initialize test passed
+10 / 10
+
+-----------------------------
+Testing make clean
+Expected 'make clean' output: rm -rf obj/* exe/*
+Actual 'make clean' output  : rm -rf  obj/* exe/*
+
+make clean test passed
+10 / 10
+
+-----------------------------
+Testing make decode_sol
+Expected make decode_sol output: 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/decode_sol.cpp -o obj/decode_sol.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/decode.cpp -o obj/decode.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/decode_sol obj/decode_sol.o obj/decode.o
+Actual make decode_sol output  : 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/decode_sol.cpp -o obj/decode_sol.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/decode.cpp -o obj/decode.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/decode_sol obj/decode_sol.o obj/decode.o
+
+make decode_sol test passed
+10 / 10
+
+-----------------------------
+Testing decode_sol program
+
+-----------------------------
+Expected './exe/decode_sol' output: Incorrect number of inputs
+  Actual './exe/decode_sol' output: Incorrect number of inputs
+
+./exe/decode_sol test passed
+10 / 10
+
+-----------------------------
+Expected './exe/decode_sol 00000' output: 1
+  Actual './exe/decode_sol 00000' output: 1
+
+./exe/decode_sol 00000 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/decode_sol 0123' output: 3
+  Actual './exe/decode_sol 0123' output: 3
+
+./exe/decode_sol 0123 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/decode_sol 0126' output: 2
+  Actual './exe/decode_sol 0126' output: 2
+
+./exe/decode_sol 0126 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/decode_sol 0125' output: 3
+  Actual './exe/decode_sol 0125' output: 3
+
+./exe/decode_sol 0125 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/decode_sol 25' output: 2
+  Actual './exe/decode_sol 25' output: 2
+
+./exe/decode_sol 25 test passed
+15  / 15 
+
+-----------------------------
+Expected './exe/decode_sol 26' output: 1
+  Actual './exe/decode_sol 26' output: 1
+
+./exe/decode_sol 26 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/decode_sol 0121342' output: 5
+  Actual './exe/decode_sol 0121342' output: 5
+
+./exe/decode_sol 0121342 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/decode_sol 01213425' output: 10
+  Actual './exe/decode_sol 01213425' output: 10
+
+./exe/decode_sol 01213425 test passed
+20 / 20
+
+-----------------------------
+Expected './exe/decode_sol 01213426' output: 5
+  Actual './exe/decode_sol 01213426' output: 5
+
+./exe/decode_sol 01213426 test passed
+20  / 20 
+
+-----------------------------
+decode_sol valgrind test
+valgrind --tool=memcheck --leak-check=yes ./exe/decode_sol 0126 > decode_sol_valgrind.out 2>&1
+valgrind --tool=memcheck --leak-check=yes ./exe/decode_sol 0126 > decode_sol_valgrind.out 2>&1 passed
+10 / 10
+
+-----------------------------
+Expected make max_prod_test output: 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/max_prod_test.cpp -o obj/max_prod_test.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/max_prod.cpp -o obj/max_prod.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/max_prod_test obj/max_prod_test.o obj/max_prod.o
+Actual make max_prod_test output  : 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/max_prod_test.cpp -o obj/max_prod_test.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -c src/max_prod.cpp -o obj/max_prod.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm -o exe/max_prod_test obj/max_prod_test.o obj/max_prod.o
+
+make max_prod_test test passed
+10 / 10
+
+-----------------------------
+Expected './exe/max_prod_test' output: Incorrect number of inputs
+  Actual './exe/max_prod_test' output: Incorrect number of inputs
+
+./exe/max_prod_test test passed
+15 / 15
+
+-----------------------------
+Expected './exe/max_prod_test 0' output: 0
+  Actual './exe/max_prod_test 0' output: 0
+
+./exe/max_prod_test 0 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/max_prod_test 10' output: 10
+  Actual './exe/max_prod_test 10' output: 10
+
+./exe/max_prod_test 10 test passed
+15 / 15
+
+-----------------------------
+Expected './exe/max_prod_test -2 0 -1' output: 0
+  Actual './exe/max_prod_test -2 0 -1' output: 0
+
+./exe/max_prod_test -2 0 -1 test passed
+20 / 20
+
+-----------------------------
+Expected './exe/max_prod_test -2 0 -1 -4' output: 4
+  Actual './exe/max_prod_test -2 0 -1 -4' output: 4
+
+./exe/max_prod_test -2 0 -1 -4 test passed
+20 / 20
+
+-----------------------------
+Expected './exe/max_prod_test 10 32 -2 0 -10 -5 100' output: 5000
+  Actual './exe/max_prod_test 10 32 -2 0 -10 -5 100' output: 5000
+
+./exe/max_prod_test 10 32 -2 0 -10 -5 100 test passed
+20 / 20
+
+-----------------------------
+Expected './exe/max_prod_test 10 32 -2 0 -10 5 100' output: 500
+  Actual './exe/max_prod_test 10 32 -2 0 -10 5 100' output: 500
+
+./exe/max_prod_test 10 32 -2 0 -10 5 100 test passed
+20 / 20
+
+-----------------------------
+Expected './exe/max_prod_test 10 32 -2 0 10 -5 100' output: 320
+  Actual './exe/max_prod_test 10 32 -2 0 10 -5 100' output: 320
+
+./exe/max_prod_test 10 32 -2 0 10 -5 100 test passed
+20 / 20
+
+-----------------------------
+Expected './exe/max_prod_test 10 32 -2 18 -10 -5 100' output: 115200
+  Actual './exe/max_prod_test 10 32 -2 18 -10 -5 100' output: 115200
+
+./exe/max_prod_test 10 32 -2 18 -10 -5 100 test passed
+20 / 20
+
+-----------------------------
+Expected './exe/max_prod_test 10 32 -2 18 -10 5 100' output: 57600000
+  Actual './exe/max_prod_test 10 32 -2 18 -10 5 100' output: 57600000
+
+./exe/max_prod_test 10 32 -2 18 -10 5 100 test passed
+20 / 20
+
+-----------------------------
+max_prod_test valgrind test
+valgrind --tool=memcheck --leak-check=yes ./exe/max_prod_test 10 32 -2 0 -10 -5 100 > max_prod_valgrind.out 2>&1
+
+valgrind --tool=memcheck --leak-check=yes ./exe/max_prod_test 10 32 -2 0 -10 -5 100 > max_prod_valgrind.out 2>&1 passed
+10 / 10
+
+-----------------------------
+-----------------------------
+
+CC03 Coding Portion Grade for Mia Manabat (mmanabat): 400 / 400 

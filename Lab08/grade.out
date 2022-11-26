@@ -1,0 +1,131 @@
+-----------------------------
+Grading script for Lab 08
+
+Student's Name: Mia Manabat
+Student's ID  : mmanabat
+
+If the outputs appear to match, but the test failed, please check for whitespace in your output.
+By making these cosmetic changes to your output, you can save the TAs hours of grading time.
+
+-----------------------------
+
+-----------------------------
+Testing make Alien
+rm -rf obj/* exe/*
+Expected make Alien output: 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Alien.cpp -o obj/Alien.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/Alien obj/Alien.o
+Actual make Alien output  : 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Alien.cpp -o obj/Alien.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/Alien obj/Alien.o
+
+make Alien test passed
+15 / 15
+
+-----------------------------
+Testing Alien program
+
+-----------------------------
+Expected 'exe/./Alien' output: Alien Words: wt wrf er ett eftt wer 
+
+Parent Array Values:
+w -1
+t 3
+r 4
+f 2
+e 0
+  Actual 'exe/./Alien' output: Alien Words: wt wrf er ett eftt wer 
+
+Parent Array Values:
+w -1
+t 3
+r 4
+f 2
+e 0
+
+exe/./Alien test passed
+18 / 18
+
+-----------------------------
+Testing make Alien2
+rm -rf obj/* exe/*
+Expected make Alien2 output: 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Alien2.cpp -o obj/Alien2.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/Alien2 obj/Alien2.o
+Actual make Alien2 output  : 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Alien2.cpp -o obj/Alien2.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/Alien2 obj/Alien2.o
+
+make Alien2 test passed
+15 / 15
+
+-----------------------------
+Testing Alien2 program
+
+-----------------------------
+Expected 'exe/./Alien2' output: Alien Words: eftt wer wt wrf ett er 
+
+Parent Array Values:
+e 3
+f 4
+t 1
+w -1
+r 0
+  Actual 'exe/./Alien2' output: Alien Words: eftt wer wt wrf ett er 
+
+Parent Array Values:
+e 3
+f 4
+t 1
+w -1
+r 0
+
+exe/./Alien2 test passed
+18 / 18
+
+-----------------------------
+Testing make Alien3
+rm -rf obj/* exe/*
+Expected make Alien3 output: 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Alien3.cpp -o obj/Alien3.o
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/Alien3 obj/Alien3.o
+Actual make Alien3 output  : 
+g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -c src/Alien3.cpp -o obj/Alien3.o g++ -m64 -std=c++11 -Weffc++ -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -o exe/Alien3 obj/Alien3.o
+
+make Alien3 test passed
+15 / 15
+
+-----------------------------
+Testing Alien3 program
+
+-----------------------------
+Expected 'exe/./Alien3' output: Alien Words: wt werfghabit 
+
+Parent Array Values:
+w -1
+t 9
+e 0
+r 2
+f 3
+g 4
+h 5
+a 6
+b 7
+i 8
+  Actual 'exe/./Alien3' output: Alien Words: wt werfghabit 
+
+Parent Array Values:
+w -1
+t 9
+e 0
+r 2
+f 3
+g 4
+h 5
+a 6
+b 7
+i 8
+
+exe/./Alien3 test passed
+19 / 19
+-----------------------------
+
+Lab 08 Grade for Mia Manabat (mmanabat): 100 / 100 
